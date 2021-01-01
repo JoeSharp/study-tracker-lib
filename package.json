@@ -1,6 +1,6 @@
 {
   "name": "study-tracker-lib",
-  "version": "8.0.1",
+  "version": "0.0.1",
   "repository": "git@github.com:JoeSharp/study-tracker-lib.git",
   "description": "Model and common libraries for Study Tracker system",
   "author": "Joe Sharp <ratracejoe@hotmail.com>",
