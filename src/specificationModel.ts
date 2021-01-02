@@ -18,6 +18,7 @@ export interface ISpecificationComponent {
 }
 
 export interface ISpecification {
+  _id: string;
   examBoard: string;
   subject: string;
   qualificationCode: string;
