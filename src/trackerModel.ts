@@ -1,23 +1,32 @@
-export enum Confidence {
-  notCovered = 0,
-  veryHigh = 1,
-  high = 2,
-  medium = 3,
-  low = 4,
-}
+export const CONFIDENCE_NOT_COVERED = "not_covered";
+export const CONFIDENCE_VERY_HIGH = "very_high";
+export const CONFIDENCE_HIGH = "high";
+export const CONFIDENCE_MEDIUM = "medium";
+export const CONFIDENCE_LOW = "low";
+
+export type Confidence =
+  | "not_covered"
+  | "very_high"
+  | "high"
+  | "medium"
+  | "low";
+
+export const ConfidenceOptions: Confidence[] = [
+  CONFIDENCE_NOT_COVERED,
+  CONFIDENCE_VERY_HIGH,
+  CONFIDENCE_HIGH,
+  CONFIDENCE_MEDIUM,
+  CONFIDENCE_LOW,
+];
 
 // Dashboard Summary
 export interface IByConfidenceCount {
-  [confidence: number]: number;
+  [confidence: string]: number;
 }
 
 export interface ISectionSummary {
   percentCovered: number;
   byConfidence: IByConfidenceCount;
-}
-
-export interface ITrackerDashboardSummary {
-  [sectionId: string]: ISectionSummary;
 }
 
 // Raw Trackers
